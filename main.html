@@ -5,54 +5,32 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Luigi Alemano</title>
     <style>
-        :root {
-            --bg: #f7f7f7;
-            --text: #0f0f0f;
-            --muted: #444;
-            --accent: #1e73ff;
-            --card: #ffffff;
-            --border: #e2e2e2;
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
         body {
             margin: 0;
-            min-height: 100vh;
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            background: var(--bg);
-            color: var(--text);
+            padding: 32px;
+            font-family: Arial, sans-serif;
+            color: #222;
+            background: #fafafa;
             display: flex;
             justify-content: center;
-            align-items: center;
-            padding: 24px;
         }
 
         .layout {
-            display: grid;
-            grid-template-columns: 230px 1fr;
-            gap: 32px;
-            max-width: 1100px;
+            display: flex;
+            gap: 28px;
+            max-width: 980px;
             width: 100%;
+            align-items: flex-start;
         }
 
         .nav {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 12px;
-            padding: 20px;
-            display: flex;
-            flex-direction: column;
-            gap: 18px;
-            align-self: start;
+            width: 180px;
         }
 
         .nav h1 {
-            font-size: 1.6rem;
-            margin: 0;
-            letter-spacing: 0.2px;
+            margin: 0 0 14px 0;
+            font-size: 1.3rem;
+            line-height: 1.2;
         }
 
         .nav-buttons {
@@ -65,108 +43,42 @@
         }
 
         .btn {
-            display: inline-block;
+            display: block;
             text-decoration: none;
-            background: var(--accent);
+            background: #1e73ff;
             color: #fff;
-            padding: 12px 14px;
-            border-radius: 8px;
-            text-align: center;
-            font-weight: 600;
-            border: none;
-            cursor: pointer;
-            transition: transform 0.08s ease, box-shadow 0.12s ease, background 0.12s ease;
-            box-shadow: 0 6px 20px rgba(30, 115, 255, 0.18);
-        }
-
-        .btn:hover {
-            transform: translateY(-1px);
-            background: #1459c2;
-            box-shadow: 0 10px 28px rgba(20, 89, 194, 0.2);
-        }
-
-        .btn:active {
-            transform: translateY(0);
+            padding: 10px 12px;
+            text-align: left;
         }
 
         .content {
-            display: grid;
-            gap: 20px;
-            justify-items: center;
-        }
-
-        .photo {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 18px;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transform: translateY(-200px);
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-items: flex-start;
         }
 
         .photo img {
-            display: block;
-            width: 100%;
             max-width: 200px;
+            width: 100%;
             height: auto;
-            border-radius: 12px;
         }
 
         .bio {
-            background: var(--card);
-            border: 1px solid var(--border);
-            border-radius: 14px;
-            padding: 18px 20px;
-            max-width: 520px;
-            width: 100%;
-            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
-            transform: translateY(-200px);
+            max-width: 620px;
         }
 
         .bio p {
             margin: 0;
-            line-height: 1.5;
-            color: var(--muted);
-            font-size: 1.05rem;
+            line-height: 1.45;
             white-space: pre-line;
+            max-width: 58ch;
         }
 
-        @media (max-width: 900px) {
-            .layout {
-                grid-template-columns: 1fr;
-            }
-            .nav {
-                flex-direction: row;
-                align-items: center;
-                justify-content: space-between;
-            }
-            .nav-buttons {
-                flex-direction: row;
-                flex-wrap: wrap;
-            }
-            .btn {
-                width: 100%;
-                min-width: 180px;
-            }
-            .content {
-                justify-items: center;
-            }
-        }
-
-        @media (max-width: 640px) {
-            body {
-                padding: 16px;
-            }
-            .nav {
-                flex-direction: column;
-                align-items: flex-start;
-            }
-            .nav-buttons {
-                width: 100%;
-            }
-            .btn {
-                width: 100%;
-            }
+        @media (max-width: 720px) {
+            body { padding: 20px; }
+            .layout { flex-direction: column; }
+            .nav { width: 100%; }
         }
     </style>
 </head>
@@ -184,7 +96,13 @@
                 <img src="image.JPG" alt="Portrait of Luigi Alemano">
             </div>
             <div class="bio">
-                <p>Type here your biography</p>
+                <p>Luigi Alemanno is a truth seeker (not of the final truth), although he is interested in anything that involves people and nature. He is spending most of his time learning quantum physics and the ideas of the greatest thinkers of our time, Karl Popper and David Deutsch.
+                    He is interested in quantum computers and how we will obtain the jump to universality as Alan Turing did with classical computers. 
+                    Philosophical issues that he is also interested in are: 
+                                                        Why are the laws of physics as they are ?
+                                                        How can we describe qualia ? 
+                                                        How should education in Western countries be re-built based on the great discovery of the universal explainer/constructor of David Deutsch ?
+                                                        What is consciousness, and how all its different characteristics like qualia, creativity, interlocutor(s) are related ? and all the other issues about consciousness.</p>
             </div>
         </main>
     </div>
