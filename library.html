@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Anti Library</title>
+    <style>
+        :root {
+            --bg: #f7f7f7;
+            --text: #0f0f0f;
+            --muted: #444;
+            --accent: #1e73ff;
+            --card: #ffffff;
+            --border: #e2e2e2;
+        }
+
+        * { box-sizing: border-box; }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 24px;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 12px;
+            padding: 24px;
+            width: min(720px, 100%);
+            box-shadow: 0 12px 32px rgba(0, 0, 0, 0.06);
+        }
+
+        h1 {
+            margin: 0 0 8px 0;
+            font-size: 1.8rem;
+        }
+
+        p {
+            margin: 0 0 16px 0;
+            color: var(--muted);
+            line-height: 1.6;
+        }
+
+        .books {
+            list-style: none;
+            padding: 0;
+            margin: 12px 0 0 0;
+            display: grid;
+            gap: 10px;
+        }
+
+        .books li {
+            background: #f4f7ff;
+            border: 1px solid #d7e5ff;
+            border-radius: 8px;
+            padding: 12px 14px;
+            color: #0f244a;
+        }
+
+        .back {
+            display: inline-block;
+            margin-top: 18px;
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        .back:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <h1>My Anti Library</h1>
+        <p>A simple place to share what I'm reading. Add more books here anytime.</p>
+        <ul class="books">
+            <li>The Lean Startup — Eric Ries</li>
+            <li>Zero to One — Peter Thiel</li>
+            <li>Hackers &amp; Painters — Paul Graham</li>
+        </ul>
+        <a class="back" href="main.html">&larr; Back to home</a>
+    </div>
+</body>
+</html>
