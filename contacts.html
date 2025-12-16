@@ -3,57 +3,121 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Antilibrary</title>
+    <title>Get in Touch</title>
     <style>
         body {
-            margin: 24px;
+            margin: 0;
+            padding: 32px;
             font-family: Arial, sans-serif;
             color: #222;
             background: #fafafa;
+            display: flex;
+            justify-content: center;
+        }
+
+        .layout {
+            display: flex;
+            gap: 28px;
+            max-width: 980px;
+            width: 100%;
+            align-items: flex-start;
+        }
+
+        .nav {
+            width: 180px;
+        }
+
+        .nav h1 {
+            margin: 0 0 14px 0;
+            font-size: 1.3rem;
+            line-height: 1.2;
+        }
+
+        .nav-buttons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            display: block;
+            text-decoration: none;
+            background: #1e73ff;
+            color: #fff;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-items: flex-start;
+            width: 100%;
         }
 
         h1 {
-            margin: 0 0 8px 0;
-            font-size: 1.4rem;
+            margin: 0;
+            font-size: 1.5rem;
         }
 
         p {
-            margin: 0 0 16px 0;
-            line-height: 1.4;
+            margin: 0;
+            line-height: 1.5;
         }
 
-        .books {
-            padding-left: 18px;
-            margin: 12px 0 0 0;
-            line-height: 1.5;
+        .contact-list {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
         }
 
         .back {
             display: inline-block;
-            margin-top: 18px;
+            margin-top: 12px;
             color: #1e73ff;
             text-decoration: none;
+        }
+
+        @media (max-width: 720px) {
+            body { padding: 20px; }
+            .layout { flex-direction: column; }
+            .nav { width: 100%; }
         }
     </style>
 </head>
 <body>
-    <h1>Getting in touch</h1>
-    <p>You can reach me through any of the following:</p>
+    <div class="layout">
+        <aside class="nav">
+            <h1>Luigi Alemanno</h1>
+            <ul class="nav-buttons">
+                <li><a class="btn" href="index.html">Home</a></li>
+                <li><a class="btn" href="library.html">My Antilibrary</a></li>
+            </ul>
+        </aside>
 
-    <div class="books">
-        <p>
-            <strong>Email:</strong><br>
-            <a href="mailto:1luigialemanno@gmail.com">1luigialemanno@gmail.com</a>
-        </p>
-        <p>
-            <strong>X (Twitter):</strong><br>
-            <a href="https://x.com/luigialemanno_" target="_blank" rel="noopener">@luigialemanno_</a>
-        </p>
+        <main class="content">
+            <h1>Get in Touch</h1>
+            <p>You can reach me through any of the following:</p>
+
+            <div class="contact-list">
+                <p>
+                    <strong>Email:</strong><br>
+                    <a href="mailto:1luigialemanno@gmail.com">1luigialemanno@gmail.com</a>
+                </p>
+                <p>
+                    <strong>X (Twitter):</strong><br>
+                    <a href="https://x.com/luigialemanno_" target="_blank" rel="noopener">@luigialemanno_</a>
+                </p>
+            </div>
+
+            <p>Feel free to connect for questions, discussions, or just to say hello.</p>
+            <a href="index.html" class="back">← Back to home</a>
+        </main>
     </div>
-
-    <p>Feel free to connect for questions, discussions, or just to say hello.</p>
-
-    <a href="index.html" class="back">← Back to home</a>
 </body>
 </html>
  

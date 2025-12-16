@@ -6,159 +6,223 @@
     <title>My Antilibrary</title>
     <style>
         body {
-            margin: 24px;
+            margin: 0;
+            padding: 32px;
             font-family: Arial, sans-serif;
             color: #222;
             background: #fafafa;
+            display: flex;
+            justify-content: center;
+        }
+
+        .layout {
+            display: flex;
+            gap: 28px;
+            max-width: 980px;
+            width: 100%;
+            align-items: flex-start;
+        }
+
+        .nav {
+            width: 180px;
+        }
+
+        .nav h1 {
+            margin: 0 0 14px 0;
+            font-size: 1.3rem;
+            line-height: 1.2;
+        }
+
+        .nav-buttons {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .btn {
+            display: block;
+            text-decoration: none;
+            background: #1e73ff;
+            color: #fff;
+            padding: 10px 12px;
+            text-align: left;
+        }
+
+        .content {
+            display: flex;
+            flex-direction: column;
+            gap: 14px;
+            align-items: flex-start;
+            width: 100%;
         }
 
         h1 {
-            margin: 0 0 8px 0;
-            font-size: 1.4rem;
+            margin: 0;
+            font-size: 1.5rem;
         }
 
         p {
-            margin: 0 0 16px 0;
-            line-height: 1.4;
+            margin: 0;
+            line-height: 1.5;
         }
 
         .books {
             padding-left: 18px;
-            margin: 12px 0 0 0;
+            margin: 6px 0 0 0;
             line-height: 1.5;
+            max-width: 720px;
         }
 
         .back {
             display: inline-block;
-            margin-top: 18px;
+            margin-top: 12px;
             color: #1e73ff;
             text-decoration: none;
+        }
+
+        @media (max-width: 720px) {
+            body { padding: 20px; }
+            .layout { flex-direction: column; }
+            .nav { width: 100%; }
         }
     </style>
 </head>
 <body>
-    <h1>My Antilibrary</h1>
-    <p>A simple place to share what I've not yet read. Constantly updated.</p>
-    <ul class="books">
-	<li>Leonard Susskind Quantum Mechanics: The Theoretical Minimum</li>
-	<li>Introduction to Quantum Mechanics — David J. Griffiths</li>
-	<li>Quantum Mechanics David Tong</li>
-        <li>The Emergent Multiverse — David Wallace</li>
-	<li>The Many Minds Interpretation of Quantum Mechanics — Michael Lockwood</li>
-        <li>The Many-Worlds Interpretation of Quantum Mechanics — DeWitt &amp; Graham (eds.)</li>
-        <li> M. Agrawal et al. PRIMES is in P (2004)</li>
-	<li>Gottesmann, An Introduction to Quantum Error Correction and Fault-Tolerant Quantum Computation</li>
-	<li>Quantum Computing since Democritus</li>
-	<li>A Classical and Quantum Computation</li>
-	<li>Quantum Information Theory (Wilde)</li>
-        <li>A Comprehensive Grammar of the English Language — Quirk et al.</li>
-	<li>Computing Machinery and Intelligence — Alan Turing</li>
-        <li>Linear Algebra and Its Applications — Gilbert Strang</li>
-        <li>Linear Algebra and Its Applications — Peter D. Lax</li>
-        <li>Quantum Keys for Keeping Secrets — Artur Ekert</li>
-        <li>Quantum-Mechanical Computers — Seth Lloyd</li>
-	<li>Quantum Theory, the Church-Turing Principle and the Universal Quantum Computer — David Deutsch</li>
-	<li>Rapid Solution of Problems by Quantum Computation — David Deutsch and Richard Jozsa</li>
-	<li>A Fast Quantum Mechanical Algorithm for Database Search — Lov K. Grover</li>
-	<li>Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer — Peter W. Shor</li>
-	<li>Scheme for Reducing Decoherence in Quantum Computer Memory — Peter W. Shor</li>
-	<li>Quantum Computer Science: An Introduction — N. David Mermin</li>
-	<li>Quantum Computation and Quantum Information Lecture Notes — John Preskill</li>
-	<li>Artur Ekert introduction to quantum information science</li>
-        <li>A Quantum Revolution for Computing — Brown</li>
-        <li>Picturing Quantum Processes — Bob Coecke &amp; Aleks Kissinger</li>
-	<li>All papers by David Deutsch</li>
-	<li>The theory of quantum information Watrous</li>
-	<li>The Solovay-Kitaev Algoritm Quantum information computer (2006)</li>
+    <div class="layout">
+        <aside class="nav">
+            <h1>Luigi Alemanno</h1>
+            <ul class="nav-buttons">
+                <li><a class="btn" href="index.html">Home</a></li>
+                <li><a class="btn" href="contacts.html">Get in Touch</a></li>
+            </ul>
+        </aside>
 
-
-	<li>A Fortunate Universe — Geraint Lewis &amp; Luke Barnes</li>
-        <li>A Journey into Gravity and Spacetime — John Archibald Wheeler</li>
-        <li>A Pocket Popper — David Miller (ed.)</li>
-        <li>About Time: Einstein's Unfinished Revolution — Paul Davies</li>
-        <li>Anathem — Neal Stephenson</li>
-        <li>Because of Logic: Empiricism / Inductivism / Ought-is — Hall</li>
-        <li>Bold Conjectures, Volume I: Select Interviews of David Deutsch</li>
-        <li>Barnett Quantum Information Book</li>
-        <li>Capitalism — Ayn Rand</li>
-        <li>Comment on “The Many Minds Interpretation of Quantum Mechanics” — David Deutsch</li>
-        <li>Conjectures and Refutations — Karl Popper</li>
-        <li>Critical Rationalism: A Restatement and Defense — David Miller</li>
-        <li>Criticism and the Growth of Knowledge — Lakatos &amp; Musgrave (eds.)</li>
-        <li>Cryptonomicon — Neal Stephenson</li>
-        <li>Darwin's Dangerous Idea: Evolution and the Meanings of Life — Daniel Dennett</li>
-        <li>David Tong's series in physics</li>
-        <li>Does God Play Dice? The Mathematics of Chaos — Ian Stewart</li>
-        <li>Dreams of a Final Theory — Steven Weinberg</li>
-        <li>Elementary Differential Equations with Boundary Value Problems — Boyce &amp; DiPrima</li>
-        <li>Enlightenment Now — Steven Pinker</li>
-        <li>Essays and Aphorisms (from Parerga and Paralipomena) — Arthur Schopenhauer</li>
-        <li>Exhalation: Stories — Ted Chiang</li>
-        <li>Feynman Lectures on Physics, Volume II — Richard Feynman</li>
-        <li>Ficciones — Jorge Luis Borges</li>
-        <li>Freedom and Rationality: Essays in Honour of John Watkins — Worrall (ed.)</li>
-        <li>Functional Analysis — Peter D. Lax</li>
-        <li>Galileo Galilei: A Biography and Inquiry into his Philosophy of Science — Ludovico Geymonat</li>
-        <li>God and the New Physics — Paul Davies</li>
-        <li>Gödel, Escher, Bach: An Eternal Golden Braid — Douglas Hofstadter</li>
-        <li>Gödel's Proof — Ernest Nagel &amp; James Newman</li>
-        <li>Gravitation and Cosmology — Steven Weinberg</li>
-        <li>Helgoland: Making Sense of the Quantum Revolution — Carlo Rovelli</li>
-        <li>How We Invented Freedom &amp; Why It Matters — Finkelstein</li>
-        <li>Introduction to Electrodynamics — David J. Griffiths</li>
-        <li>Introduction to the Philosophy of Science — John O’Hear</li>
-        <li>Intrinsically Difficult Problems — Larry Stockmeyer &amp; Ashok Chandra</li>
-        <li>Labyrinths: Selected Stories and Other Writings — Jorge Luis Borges</li>
-        <li>Meditations — Marcus Aurelius</li>
-        <li>Mind, Brain and the Quantum — Michael Lockwood</li>
-        <li>Objective Knowledge — Karl Popper</li>
-        <li>On the Suffering of the World / Studies in Pessimism — Arthur Schopenhauer</li>
-        <li>Parerga and Paralipomena, Vol. 2 — Arthur Schopenhauer</li>
-        <li>Popper — Bryan Magee</li>
-        <li>Reality Is Not What It Seems: The Journey to Quantum Gravity — Carlo Rovelli</li>
-        <li>Sapiens — Yuval Noah Harari</li>
-        <li>Seven Brief Lessons on Physics — Carlo Rovelli</li>
-        <li>Snow Crash — Neal Stephenson</li>
-        <li>Stories of Your Life and Others — Ted Chiang</li>
-        <li>The Aleph and Other Stories — Jorge Luis Borges</li>
-        <li>The Ancestor's Tale — Richard Dawkins</li>
-        <li>The Anthropic Cosmological Principle — John Barrow &amp; Frank Tipler</li>
-        <li>The Ascent of Man — Jacob Bronowski</li>
-        <li>The Blind Watchmaker — Richard Dawkins</li>
-        <li>The Cultural History of Physics — Karoly Simonyi</li>
-        <li>The Diamond Age: Or, A Young Lady's Illustrated Primer — Neal Stephenson</li>
-        <li>The Elegant Universe — Brian Greene</li>
-        <li>The Emperor’s New Mind — Roger Penrose</li>
-        <li>The Extended Phenotype — Richard Dawkins</li>
-        <li>The First Three Minutes — Steven Weinberg</li>
-        <li>The Ghost in the Atom — Paul Davies &amp; Julian Brown</li>
-        <li>The Goldilocks Enigma: Why Is the Universe Just Right for Life? — Paul Davies</li>
-        <li>The Last Three Minutes: Conjectures About the Ultimate Fate of the Universe — Paul Davies</li>
-        <li>The Lessons of History — Will &amp; Ariel Durant</li>
-        <li>The Logic of Scientific Discovery — Karl Popper</li>
-        <li>The Meme Machine — Susan Blackmore</li>
-        <li>The Mind of God — Paul Davies</li>
-        <li>The Myth of the Framework — Karl Popper</li>
-        <li>The Open Society and Its Enemies (Vols. 1–2) — Karl Popper</li>
-        <li>The Order of Time — Carlo Rovelli</li>
-        <li>The Physics of Immortality — Frank J. Tipler</li>
-        <li>The Poverty of Historicism — Karl Popper</li>
-        <li>The Proteus Operation — James P. Hogan</li>
-        <li>The Republic — Plato</li>
-        <li>The Science of Can and Can’t — Chiara Marletto</li>
-        <li>The Selfish Gene — Richard Dawkins</li>
-        <li>The Structure of Scientific Revolutions — Thomas Kuhn</li>
-        <li>The Unity of the Universe — Dennis Sciama</li>
-        <li>The Unnatural Nature of Science — Lewis Wolpert</li>
-        <li>The War on the West — Douglas Murray</li>
-        <li>The Wisdom of Life and Counsels and Maxims — Arthur Schopenhauer</li>
-        <li>The World as Will and Representation (Vols. 1–2) — Arthur Schopenhauer</li>
-        <li>Thermal Physics — Charles Kittel</li>
-        <li>Unended Quest: An Intellectual Autobiography — Karl Popper</li>
-        <li>Virtual Worlds — Benjamin Woolley</li>
-        <li>White Holes — Carlo Rovelli</li>
-        <li>Any works by Ayn Rand</li>
-    </ul>
-    <a class="back" href="index.html">&larr; Back to home</a>
+        <main class="content">
+            <h1>My Antilibrary</h1>
+            <p>A simple place to share what I've not yet read. Constantly updated.</p>
+            <ul class="books">
+                <li>Leonard Susskind Quantum Mechanics: The Theoretical Minimum</li>
+                <li>Introduction to Quantum Mechanics — David J. Griffiths</li>
+                <li>Quantum Mechanics David Tong</li>
+                <li>The Emergent Multiverse — David Wallace</li>
+                <li>The Many Minds Interpretation of Quantum Mechanics — Michael Lockwood</li>
+                <li>The Many-Worlds Interpretation of Quantum Mechanics — DeWitt &amp; Graham (eds.)</li>
+                <li> M. Agrawal et al. PRIMES is in P (2004)</li>
+                <li>Gottesmann, An Introduction to Quantum Error Correction and Fault-Tolerant Quantum Computation</li>
+                <li>Quantum Computing since Democritus</li>
+                <li>A Classical and Quantum Computation</li>
+                <li>Quantum Information Theory (Wilde)</li>
+                <li>A Comprehensive Grammar of the English Language — Quirk et al.</li>
+                <li>Computing Machinery and Intelligence — Alan Turing</li>
+                <li>Linear Algebra and Its Applications — Gilbert Strang</li>
+                <li>Linear Algebra and Its Applications — Peter D. Lax</li>
+                <li>Quantum Keys for Keeping Secrets — Artur Ekert</li>
+                <li>Quantum-Mechanical Computers — Seth Lloyd</li>
+                <li>Quantum Theory, the Church-Turing Principle and the Universal Quantum Computer — David Deutsch</li>
+                <li>Rapid Solution of Problems by Quantum Computation — David Deutsch and Richard Jozsa</li>
+                <li>A Fast Quantum Mechanical Algorithm for Database Search — Lov K. Grover</li>
+                <li>Polynomial-Time Algorithms for Prime Factorization and Discrete Logarithms on a Quantum Computer — Peter W. Shor</li>
+                <li>Scheme for Reducing Decoherence in Quantum Computer Memory — Peter W. Shor</li>
+                <li>Quantum Computer Science: An Introduction — N. David Mermin</li>
+                <li>Quantum Computation and Quantum Information Lecture Notes — John Preskill</li>
+                <li>Artur Ekert introduction to quantum information science</li>
+                <li>A Quantum Revolution for Computing — Brown</li>
+                <li>Picturing Quantum Processes — Bob Coecke &amp; Aleks Kissinger</li>
+                <li>All papers by David Deutsch</li>
+                <li>The theory of quantum information Watrous</li>
+                <li>The Solovay-Kitaev Algoritm Quantum information computer (2006)</li>
+                <li>A Fortunate Universe — Geraint Lewis &amp; Luke Barnes</li>
+                <li>A Journey into Gravity and Spacetime — John Archibald Wheeler</li>
+                <li>A Pocket Popper — David Miller (ed.)</li>
+                <li>About Time: Einstein's Unfinished Revolution — Paul Davies</li>
+                <li>Anathem — Neal Stephenson</li>
+                <li>Because of Logic: Empiricism / Inductivism / Ought-is — Hall</li>
+                <li>Bold Conjectures, Volume I: Select Interviews of David Deutsch</li>
+                <li>Barnett Quantum Information Book</li>
+                <li>Capitalism — Ayn Rand</li>
+                <li>Comment on “The Many Minds Interpretation of Quantum Mechanics” — David Deutsch</li>
+                <li>Conjectures and Refutations — Karl Popper</li>
+                <li>Critical Rationalism: A Restatement and Defense — David Miller</li>
+                <li>Criticism and the Growth of Knowledge — Lakatos &amp; Musgrave (eds.)</li>
+                <li>Cryptonomicon — Neal Stephenson</li>
+                <li>Darwin's Dangerous Idea: Evolution and the Meanings of Life — Daniel Dennett</li>
+                <li>David Tong's series in physics</li>
+                <li>Does God Play Dice? The Mathematics of Chaos — Ian Stewart</li>
+                <li>Dreams of a Final Theory — Steven Weinberg</li>
+                <li>Elementary Differential Equations with Boundary Value Problems — Boyce &amp; DiPrima</li>
+                <li>Enlightenment Now — Steven Pinker</li>
+                <li>Essays and Aphorisms (from Parerga and Paralipomena) — Arthur Schopenhauer</li>
+                <li>Exhalation: Stories — Ted Chiang</li>
+                <li>Feynman Lectures on Physics, Volume II — Richard Feynman</li>
+                <li>Ficciones — Jorge Luis Borges</li>
+                <li>Freedom and Rationality: Essays in Honour of John Watkins — Worrall (ed.)</li>
+                <li>Functional Analysis — Peter D. Lax</li>
+                <li>Galileo Galilei: A Biography and Inquiry into his Philosophy of Science — Ludovico Geymonat</li>
+                <li>God and the New Physics — Paul Davies</li>
+                <li>Gödel, Escher, Bach: An Eternal Golden Braid — Douglas Hofstadter</li>
+                <li>Gödel's Proof — Ernest Nagel &amp; James Newman</li>
+                <li>Gravitation and Cosmology — Steven Weinberg</li>
+                <li>Helgoland: Making Sense of the Quantum Revolution — Carlo Rovelli</li>
+                <li>How We Invented Freedom &amp; Why It Matters — Finkelstein</li>
+                <li>Introduction to Electrodynamics — David J. Griffiths</li>
+                <li>Introduction to the Philosophy of Science — John O’Hear</li>
+                <li>Intrinsically Difficult Problems — Larry Stockmeyer &amp; Ashok Chandra</li>
+                <li>Labyrinths: Selected Stories and Other Writings — Jorge Luis Borges</li>
+                <li>Meditations — Marcus Aurelius</li>
+                <li>Mind, Brain and the Quantum — Michael Lockwood</li>
+                <li>Objective Knowledge — Karl Popper</li>
+                <li>On the Suffering of the World / Studies in Pessimism — Arthur Schopenhauer</li>
+                <li>Parerga and Paralipomena, Vol. 2 — Arthur Schopenhauer</li>
+                <li>Popper — Bryan Magee</li>
+                <li>Reality Is Not What It Seems: The Journey to Quantum Gravity — Carlo Rovelli</li>
+                <li>Sapiens — Yuval Noah Harari</li>
+                <li>Seven Brief Lessons on Physics — Carlo Rovelli</li>
+                <li>Snow Crash — Neal Stephenson</li>
+                <li>Stories of Your Life and Others — Ted Chiang</li>
+                <li>The Aleph and Other Stories — Jorge Luis Borges</li>
+                <li>The Ancestor's Tale — Richard Dawkins</li>
+                <li>The Anthropic Cosmological Principle — John Barrow &amp; Frank Tipler</li>
+                <li>The Ascent of Man — Jacob Bronowski</li>
+                <li>The Blind Watchmaker — Richard Dawkins</li>
+                <li>The Cultural History of Physics — Karoly Simonyi</li>
+                <li>The Diamond Age: Or, A Young Lady's Illustrated Primer — Neal Stephenson</li>
+                <li>The Elegant Universe — Brian Greene</li>
+                <li>The Emperor’s New Mind — Roger Penrose</li>
+                <li>The Extended Phenotype — Richard Dawkins</li>
+                <li>The First Three Minutes — Steven Weinberg</li>
+                <li>The Ghost in the Atom — Paul Davies &amp; Julian Brown</li>
+                <li>The Goldilocks Enigma: Why Is the Universe Just Right for Life? — Paul Davies</li>
+                <li>The Last Three Minutes: Conjectures About the Ultimate Fate of the Universe — Paul Davies</li>
+                <li>The Lessons of History — Will &amp; Ariel Durant</li>
+                <li>The Logic of Scientific Discovery — Karl Popper</li>
+                <li>The Meme Machine — Susan Blackmore</li>
+                <li>The Mind of God — Paul Davies</li>
+                <li>The Myth of the Framework — Karl Popper</li>
+                <li>The Open Society and Its Enemies (Vols. 1–2) — Karl Popper</li>
+                <li>The Order of Time — Carlo Rovelli</li>
+                <li>The Physics of Immortality — Frank J. Tipler</li>
+                <li>The Poverty of Historicism — Karl Popper</li>
+                <li>The Proteus Operation — James P. Hogan</li>
+                <li>The Republic — Plato</li>
+                <li>The Science of Can and Can’t — Chiara Marletto</li>
+                <li>The Selfish Gene — Richard Dawkins</li>
+                <li>The Structure of Scientific Revolutions — Thomas Kuhn</li>
+                <li>The Unity of the Universe — Dennis Sciama</li>
+                <li>The Unnatural Nature of Science — Lewis Wolpert</li>
+                <li>The War on the West — Douglas Murray</li>
+                <li>The Wisdom of Life and Counsels and Maxims — Arthur Schopenhauer</li>
+                <li>The World as Will and Representation (Vols. 1–2) — Arthur Schopenhauer</li>
+                <li>Thermal Physics — Charles Kittel</li>
+                <li>Unended Quest: An Intellectual Autobiography — Karl Popper</li>
+                <li>Virtual Worlds — Benjamin Woolley</li>
+                <li>White Holes — Carlo Rovelli</li>
+                <li>Any works by Ayn Rand</li>
+            </ul>
+            <a class="back" href="index.html">&larr; Back to home</a>
+        </main>
+    </div>
 </body>
 </html>
